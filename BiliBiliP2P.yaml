@@ -1,0 +1,3 @@
+#解决b站看直播发热
+payload:
+  - DOMAIN,stun.chat.bilibili.com
