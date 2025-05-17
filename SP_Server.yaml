@@ -1,3 +1,3 @@
 payload:
   - DOMAIN,www.shenping.cc
-  - IP-CIDR,111.6.43.149
+  - IP-CIDR,111.6.43.149/24
