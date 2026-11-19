@@ -1,0 +1,25 @@
+dns:
+  enable: true
+  cache-algorithm: arc
+  listen: '[::]:1053'
+  ipv6: false
+  enhanced-mode: redir-host
+  respect-rules: true
+  default-nameserver:
+    - 223.5.5.5
+    - 223.6.6.6
+  proxy-server-nameserver:
+    - 114.114.114.114
+  nameserver:
+    - 'https://dns.google/dns-query#ecs=202.97.64.0/20&ecs-override=true'
+  fallback:
+    - 'https://1.1.1.1/dns-query'
+  nameserver-policy:
+    '+.okx.com':
+      - 'https://1.1.1.1/dns-query'
+    '+.shenping.cc':
+      - 'https://1.1.1.1/dns-query'
+    'geosite:private,cn':
+      - 223.5.5.5
+    'geosite:geolocation-!cn':
+      - 'https://dns.google/dns-query#ecs=202.97.64.0/20&ecs-override=true'
